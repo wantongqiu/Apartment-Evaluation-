@@ -16,7 +16,7 @@
 library(haven)
 library(tidyverse)
 # Read in the raw data. 
-raw_data <- readr::read_csv("/Users/wantongqiu/Desktop/Apartment Evaluation/inputs/data/Apartment Building Evaluation.csv"
+raw_data <- readr::read_csv("inputs/data/Apartment Building Evaluation.csv"
                      )
 # Just keep some variables that may be of interest (change 
 # this depending on your interests)
