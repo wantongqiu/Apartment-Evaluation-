@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r,echo=FALSE,warning=FALSE, message=FALSE}
 set.seed(304)
-data=read.csv("Apartment Building Evaluation.csv", header=TRUE)
+data=read.csv("inputs/data/Apartment Building Evaluation.csv", header=TRUE)
 ```
 
 \newpage
