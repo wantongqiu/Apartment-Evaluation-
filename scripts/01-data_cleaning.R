@@ -1,8 +1,8 @@
 #### Preamble ####
-# Purpose: Clean the survey data downloaded from [...UPDATE ME!!!!!]
-# Author: Rohan Alexander [CHANGE THIS TO YOUR NAME!!!!]
-# Data: 3 January 2021
-# Contact: rohan.alexander@utoronto.ca [PROBABLY CHANGE THIS ALSO!!!!]
+# Purpose: Clean the data downloaded from Open Toronto website.
+# Author: Qiu Wantong
+# Data: 27 April 2022
+# Contact: wantong.qiu@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: 
 # - Need to have downloaded the ACS data and saved it to inputs/data
@@ -16,7 +16,7 @@
 library(haven)
 library(tidyverse)
 # Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv"
+raw_data <- readr::read_csv("/Users/wantongqiu/Desktop/Apartment Evaluation/inputs/data/Apartment Building Evaluation.csv"
                      )
 # Just keep some variables that may be of interest (change 
 # this depending on your interests)
@@ -24,13 +24,14 @@ names(raw_data)
 
 reduced_data <- 
   raw_data %>% 
-  select(first_col, 
-         second_col)
+  select(YEAR_BUILT,PARKING_AREA,CONFIRMED_STOREYS,
+         CONFIRMED_UNITS,SECURITY, ELEVATORS)
 rm(raw_data)
          
 
 #### What's next? ####
-
+# filtering the uncompleted observation.
+data1= na.omit(data)
 
 
          
